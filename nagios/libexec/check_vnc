@@ -1,0 +1,9 @@
+#!/bin/bash
+service=$(ps -ef | grep -v grep | grep vnc)
+if [[ -z $service ]];then
+    echo "is Close"
+    exit 2
+else
+    echo "is OK"
+    exit 0
+fi
